@@ -85,9 +85,10 @@ botaoAdicionar.addEventListener('click', (evento) => {
     inputItem.value = '';
     inputQuantidade.value = '';
 
-    atualizarMensagemListaVazia();
-
     localStorage.setItem('listaDeCompras', listaDeCompras.innerHTML);
+
+    atualizarMensagemListaVazia();
+    ativarBotoesRemover();
 });
 
 function atualizarMensagemListaVazia() {
@@ -105,4 +106,17 @@ window.addEventListener('load', () => {
         listaDeCompras.innerHTML = listaSalva;
     }
     atualizarMensagemListaVazia();
+    ativarBotoesRemover();
 });
+
+function ativarBotoesRemover() {
+    const botoes = document.querySelectorAll('.button-delete');
+
+    botoes.forEach((botao) => {
+        botao.onclick = function () {
+            botao.closest('li').remove();
+            atualizarMensagemListaVazia();
+            localStorage.setItem('lista', listaDeCompras.innerHTML);
+        };
+    });
+}
