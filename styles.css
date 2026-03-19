@@ -25,15 +25,15 @@ body {
 
 main {
     background-color: var(--neutro);
-    margin-top: 64px;
-
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
 
-    width: 440px;
-    padding: 56px;
-
+    padding: 24px;
     align-items: center;
     border-radius: 16px;
 }
@@ -66,7 +66,7 @@ p {
     padding: 12px 16px;
     border-radius: 24px;
     border: 1px solid var(--preto);
-    width: 307px;
+    width: 100%;
 
     font-family: var(--fonte-texto);
 }
@@ -79,6 +79,7 @@ p {
 }
 
 .button-item {
+    width: 100%;
     padding: 12px 16px;
     border-radius: 24px;
     background-color: var(--cor-primaria);
@@ -88,6 +89,7 @@ p {
     font-weight: 400;
     line-height: 24px;
     border: none;
+    transition: .3s;
 }
 
 .button-item:hover {
@@ -137,6 +139,10 @@ form {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
 }
 
 ul {
@@ -148,11 +154,22 @@ ul {
     line-height: 20px;
 }
 
-.item-lista-button {
-    border: none;
-    background-color: transparent;
-}
-
 .container-lista {
     width: 100%;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
