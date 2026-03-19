@@ -1,7 +1,7 @@
 {
-    "name": "Lista de Compras da Mamãe",
-    "short_name": "Compras da Mamãe",
-    "description": "Uma lista de compras simples e fácil de usar para ajudar a organizar as compras da mamãe.",
+    "name": "Lista de Compras",
+    "short_name": "Compras",
+    "description": "Uma lista de compras simples e fácil de usar para ajudar a organizar as compras.",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#F9F9F9",
