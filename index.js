@@ -48,10 +48,11 @@ botaoAdicionar.addEventListener('click', (evento) => {
     img.alt = 'Remover item';
     botaoRemover.appendChild(img);
 
-    botaoRemover.addEventListener('click', function() {
+    botaoRemover.onclick = function() {
         itemDaLista.remove();
         atualizarMensagemListaVazia();
-    });
+        localStorage.setItem('listaDeCompras', listaDeCompras.innerHTML);
+    };
 
     const textoContainer = document.createElement('div');
 
@@ -85,6 +86,8 @@ botaoAdicionar.addEventListener('click', (evento) => {
     inputQuantidade.value = '';
 
     atualizarMensagemListaVazia();
+
+    localStorage.setItem('listaDeCompras', listaDeCompras.innerHTML);
 });
 
 function atualizarMensagemListaVazia() {
@@ -95,3 +98,11 @@ function atualizarMensagemListaVazia() {
         mensagemListaVazia.style.display = 'block';
     }
 }
+
+window.addEventListener('load', () => {
+    const listaSalva = localStorage.getItem('listaDeCompras');
+    if (listaSalva) {
+        listaDeCompras.innerHTML = listaSalva;
+    }
+    atualizarMensagemListaVazia();
+});
