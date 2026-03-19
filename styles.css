@@ -14,10 +14,15 @@
     --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
 }
 
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     background: var(--degrade-azul);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
