@@ -95,6 +95,7 @@ p {
 .button-item:hover {
     background-color: var(--cor-secundaria);
     cursor: pointer;
+    transform: translateY(-2px);
     transition: .3s;
 }
 
