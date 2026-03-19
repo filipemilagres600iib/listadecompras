@@ -117,6 +117,7 @@ function ativarBotoesRemover() {
             botao.closest('li').remove();
             atualizarMensagemListaVazia();
             localStorage.setItem('lista', listaDeCompras.innerHTML);
+            localStorage.setItem('listaDeCompras', listaDeCompras.innerHTML);
         };
     });
 }
